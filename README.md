@@ -36,7 +36,7 @@ LifeTrack is a modern, intuitive personal productivity application designed to h
 ### Installation Steps
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/personal_Tracker.git
+git clone https://github.com/Mmulobi/personal_Tracker.git
 cd personal_Tracker
 ```
 
@@ -91,8 +91,8 @@ Distributed under the MIT License.
 ## 📧 Contact
 
 [Your Name]
-- Email: your.email@example.com
-- Project Link: [https://github.com/yourusername/personal_Tracker](https://github.com/yourusername/personal_Tracker)
+- Email: mulobi4@gmail.com
+- Project Link: [https://github.com/Mmulobi/personal_Tracker](https://github.com/Mmulobi/personal_Tracker)
 
 ---
 
