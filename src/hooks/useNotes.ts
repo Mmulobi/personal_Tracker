@@ -1,4 +1,35 @@
-import { useState, useEffect } from 'react';
+// src/hooks/useNotes.ts (update searchNotes)
+const searchNotes = (query: string, filters?: {
+  tags?: string[];
+  dateRange?: { start: Date; end: Date };
+}) => {
+  let result = notes;
+
+  if (query) {
+    const searchTerms = query.toLowerCase().split(' ');
+    result = result.filter(note => 
+      searchTerms.some(term => 
+        note.title.toLowerCase().includes(term) || 
+        note.content.toLowerCase().includes(term)
+      )
+    );
+  }
+
+  if (filters?.tags?.length) {
+    result = result.filter(note => 
+      filters.tags!.some(tag => note.tags.includes(tag))
+    );
+  }
+
+  if (filters?.dateRange) {
+    result = result.filter(note => 
+      note.createdAt >= filters.dateRange!.start && 
+      note.createdAt <= filters.dateRange!.end
+    );
+  }
+
+  setFilteredNotes(result);
+};import { useState, useEffect } from 'react';
 import { Note } from '../types';
 import { storage, STORAGE_KEYS } from '../utils/storage';
 import { v4 as uuidv4 } from 'uuid';
