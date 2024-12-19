@@ -12,6 +12,10 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
     "@types/uuid": "^9.0.7",
     "@vercel/analytics": "^1.4.1",
     "date-fns": "^3.0.6",
